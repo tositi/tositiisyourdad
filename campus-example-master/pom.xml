@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>model</module>
+        <module>common</module>
+        <module>service</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.oddfar</groupId>
+    <artifactId>campus</artifactId>
+    <version>1.0.1</version>
+    <name>campus</name>
+    <description>Campus information release platform</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <mybatis-plus.version>3.3.1</mybatis-plus.version>
+        <mysql.version>5.1.46</mysql.version>
+        <swagger.version>2.7.0</swagger.version>
+        <jwt.version>0.7.0</jwt.version>
+        <fastjson.version>1.2.29</fastjson.version>
+        <httpclient.version>4.5.1</httpclient.version>
+        <easyexcel.version>2.2.0-beta2</easyexcel.version>
+        <aliyun.version>4.1.1</aliyun.version>
+        <oss.version>3.9.1</oss.version>
+        <jodatime.version>2.10.1</jodatime.version>
+        <security.version>2.2.1.RELEASE</security.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- security-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${security.version}</version>
+            </dependency>
+
+            <!--mybatis持久层-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--mybatis-plus 持久层-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!--swagger ui-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <!-- fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.oddfar</groupId>-->
+<!--                <artifactId>model</artifactId>-->
+<!--                <version>1.0.1</version>-->
+<!--            </dependency>-->
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
